@@ -55,10 +55,12 @@ public:
 
 int main(int argc, char *argv[])
 {
+    cout << "***Design Pattern - STRATEGY***" << endl;
+
     Client customClient;
     Strategy_1 str1;
     Strategy_2 str2;
-    Strategy_3 str3;Com
+    Strategy_3 str3;
 
     customClient.setStrategy(&str1);
     customClient.useStrategy();
@@ -67,6 +69,5 @@ int main(int argc, char *argv[])
     customClient.setStrategy(&str3);
     customClient.useStrategy();
 
-    cout << "Hello World!" << endl;
     return 0;
 }

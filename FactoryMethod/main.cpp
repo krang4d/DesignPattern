@@ -3,7 +3,7 @@
 
 using namespace std;
 
-enum Warrior_ID { Infantryman_ID=0, Archer_ID, Horseman_ID, Fuck_ID };
+enum Warrior_ID { Infantryman_ID=0, Archer_ID, Horseman_ID, Error_ID };
 
 class assert{};
 
@@ -67,11 +67,11 @@ Warrior* Warrior::createWarrior( Warrior_ID id )
 int main()
 {
     try {
+        cout << "***Design Pattern - FACTORY METHOD***" << endl;
         vector<Warrior*> v;
         v.push_back( Warrior::createWarrior( Infantryman_ID));
         v.push_back( Warrior::createWarrior( Archer_ID));
         v.push_back( Warrior::createWarrior( Horseman_ID));
-        v.push_back( Warrior::createWarrior( Fuck_ID));
 
         for(int i=0; i<v.size(); i++)
             v[i]->info();

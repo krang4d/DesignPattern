@@ -1,9 +1,8 @@
 #include <iostream>
-
-using namespace std;
-
 #include <iostream>
 #include <vector>
+
+using namespace std;
 
 // Иерархия классов игровых персонажей
 class Warrior
@@ -74,6 +73,7 @@ class CavalryFactory: public Factory
 // Создание объектов при помощи фабрик объектов
 int main()
 {
+    cout << "***Disegn Pattern - FACTORY METHOD2***" << endl;
     InfantryFactory* infantry_factory = new InfantryFactory;
     ArchersFactory*  archers_factory  = new ArchersFactory ;
     CavalryFactory*  cavalry_factory  = new CavalryFactory ;
