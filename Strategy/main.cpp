@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 class Strategy
 {
 public:
@@ -34,7 +32,7 @@ protected:
     Strategy* operation;
 
 public:
-    virtual ~Context() {}
+    virtual ~Context() { }
     virtual void useStrategy(void) = 0;
     virtual void setStrategy(Strategy* v) = 0;
 };
@@ -55,7 +53,7 @@ public:
 
 int main(int argc, char *argv[])
 {
-    cout << "***Design Pattern - STRATEGY***" << endl;
+    std::cout << "***Design Pattern - STRATEGY***" << std::endl;
 
     Client customClient;
     Strategy_1 str1;
