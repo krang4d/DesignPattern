@@ -12,7 +12,7 @@ class LoggerImpl;
 class Logger
 {
   public:
-    Logger( LoggerImpl* p );
+    Logger( LoggerImpl * p );
     virtual ~Logger( );
     virtual void log( string & str ) = 0;
   protected:
