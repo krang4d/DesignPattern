@@ -28,14 +28,10 @@ public:
 
         Memento();
         void restoreState();
-
     };
-
-
 };
 
 Originator::Originator(): state(0) {
-
 }
 
 void Originator::setState(int s) {
@@ -57,12 +53,10 @@ Originator::Memento* Originator::getMemento() {
     return m;
 }
 
-
 void Originator::Memento::restoreState() {
 
     org->state = state;
 }
-
 
 int main(void) {
     std::cout << "***Design Pattern - Memento***" << std::endl;
@@ -78,5 +72,4 @@ int main(void) {
 
     m1->restoreState();
     org.dumpState();
-
 }
