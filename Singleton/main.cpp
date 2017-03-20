@@ -2,7 +2,7 @@
 #include <vector>
 #include <thread>
 
-#define NUM_OF_THREAD 10000
+#define NUM_OF_THREAD 1000
 
 using namespace std;
 
@@ -40,7 +40,7 @@ int main()
 
     vector<thread> thr(NUM_OF_THREAD);
 
-    vector<thread>::iterator thread_iterator;
+    //vector<thread>::iterator thread_iterator;
     for(int i=0; i<NUM_OF_THREAD; i++){
         thr.at(i) = thread(threadFunction, ref(OnlyOne::GetInstance()));
     }

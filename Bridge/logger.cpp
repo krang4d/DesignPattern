@@ -2,8 +2,7 @@
 
 #include "logger.h"
 #include "loggerimpl.h"
-
-#define MT
+//#define ST
 
 Logger::Logger( LoggerImpl* p ) : pimpl(p)
 { }
@@ -22,7 +21,7 @@ ConsoleLogger::ConsoleLogger() : Logger(
     )
 { }
 
-void ConsoleLogger::log( string & str )
+void ConsoleLogger::log(string &str )
 {
     pimpl->console_log( str);
 }

@@ -23,14 +23,14 @@ class ConsoleLogger : public Logger
 {
   public:
     ConsoleLogger();
-    void log( string & str );
+    void log(string &str ) override;
 };
 
 class FileLogger : public Logger
 {
   public:
     FileLogger( string & file_name );
-    void log(string &str );
+    void log(string &str ) override;
   private:
     string file;
 };
@@ -39,7 +39,7 @@ class SocketLogger : public Logger
 {
   public:
     SocketLogger( string & remote_host, int remote_port );
-    void log( string & str );
+    void log( string & str ) override;
   private:
     string host;
     int    port;

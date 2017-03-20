@@ -8,3 +8,5 @@ SOURCES += main.cpp
 include(deployment.pri)
 qtcAddDeployment()
 
+LIBS += -lpthread
+

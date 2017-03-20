@@ -29,8 +29,8 @@ class Warrior
     virtual Warrior* clone() = 0;
     virtual void info() = 0;
     virtual ~Warrior() {}
-    // Параметризированный статический метод для создания воинов
-    // всех родов войск
+// Параметризированный статический метод для создания воинов
+// всех родов войск
     static Warrior* createWarrior( Warrior_ID id ) {
       Registry& r = getRegistry();
       if (r.find(id) != r.end())
@@ -38,18 +38,17 @@ class Warrior
       return 0;
     }
   protected:
-    // Добавление прототипа в множество прототипов
+// Добавление прототипа в множество прототипов
     static void addPrototype( Warrior_ID id, Warrior * prototype ) {
       Registry& r = getRegistry();
       r[id] = prototype;
     }
-    // Удаление прототипа из множества прототипов
+// Удаление прототипа из множества прототипов
     static void removePrototype( Warrior_ID id ) {
       Registry& r = getRegistry();
       r.erase( r.find( id));
     }
 };
-
 
 // В производных классах различных родов войск в виде статических
 // членов-данных определяются соответствующие прототипы
@@ -116,8 +115,9 @@ int main()
   v.push_back( Warrior::createWarrior( Infantryman_ID));
   v.push_back( Warrior::createWarrior( Archer_ID));
   v.push_back( Warrior::createWarrior( Horseman_ID));
+  //v.erase( Warrior::removePrototype( Infantryman_ID));
 
-  for(int i=0; i<v.size(); i++)
+  for(uint i=0; i<v.size(); i++)
     v[i]->info();
   // ...
 }

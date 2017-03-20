@@ -6,7 +6,7 @@ using namespace std;
 class IComponent {
 public:
     virtual void operation() = 0;
-        virtual ~IComponent(){}
+    virtual ~IComponent(){}
 };
 
 class Component : public IComponent {
