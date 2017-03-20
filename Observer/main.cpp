@@ -78,7 +78,7 @@ class ModObserver: public Observer {
     }
 };
 
-int main(int argc, char *argv[])
+int main()
 {
     std::cout << "***Design Pattern - OBSERVER***" << std::endl;
     Subject subj;
@@ -86,5 +86,6 @@ int main(int argc, char *argv[])
     DivObserver divObs2(&subj, 4); //    и типы наблюдателей
     ModObserver modObs3(&subj, 5);
     subj.setVal(13);
+    subj.setVal(15);
     return 0;
 }
