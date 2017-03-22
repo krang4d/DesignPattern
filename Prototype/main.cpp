@@ -117,7 +117,7 @@ int main()
   v.push_back( Warrior::createWarrior( Horseman_ID));
   //v.erase( Warrior::removePrototype( Infantryman_ID));
 
-  for(uint i=0; i<v.size(); i++)
+  for(int i=0; i<v.size(); i++)
     v[i]->info();
   // ...
 }

@@ -1,21 +1,21 @@
-TEMPLATE = subdirs
-SUBDIRS += AbstractFactory
-SUBDIRS += Adapter
-SUBDIRS += Adapter2
-SUBDIRS += Bridge
-SUBDIRS += Command
-SUBDIRS += Command2
-SUBDIRS += Composit
-SUBDIRS += Decorator
-SUBDIRS += FactoryMethod
-SUBDIRS += FactoryMethod2
-SUBDIRS += Memento
-SUBDIRS += MementoAndCommand
-SUBDIRS += Observer
-SUBDIRS += Prototype
-SUBDIRS += Prototype2
-SUBDIRS += Singleton
-SUBDIRS += Strategy
-SUBDIRS += Strategy2
-SUBDIRS += TemplateMethod
-
+TEMPLATE =  subdirs
+SUBDIRS +=  AbstractFactory \
+            Facade\
+            Adapter\
+            Adapter2\
+            Bridge\
+            Command\
+            Command2\
+            Composit\
+            Decorator\
+            FactoryMethod\
+            FactoryMethod2\
+            Memento\
+            MementoAndCommand\
+            Observer\
+            Prototype\
+            Prototype2\
+            Singleton\
+            Strategy\
+            Strategy2\
+            TemplateMethod\
