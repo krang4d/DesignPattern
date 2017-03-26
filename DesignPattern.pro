@@ -4,6 +4,7 @@ SUBDIRS +=  AbstractFactory \
             Adapter\
             Adapter2\
             Bridge\
+            ChainOfResponsibility\
             Command\
             Command2\
             Composit\
@@ -19,3 +20,5 @@ SUBDIRS +=  AbstractFactory \
             Strategy\
             Strategy2\
             TemplateMethod\
+            Visitor\
+            Visitor2\
