@@ -23,4 +23,5 @@ SUBDIRS +=  AbstractFactory \
             TemplateMethod\
             Visitor\
             Visitor2\
+    FactoryMethod3
 
