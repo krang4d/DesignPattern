@@ -7,6 +7,7 @@ SUBDIRS +=  AbstractFactory \
             Command\
             Command2\
             Composit\
+            ChainOfResponsibility\
             ChainOfResponsibility2\
             Decorator\
             FactoryMethod\
@@ -20,4 +21,6 @@ SUBDIRS +=  AbstractFactory \
             Strategy\
             Strategy2\
             TemplateMethod\
-    ChainOfResponsibility2
+            Visitor\
+            Visitor2\
+
