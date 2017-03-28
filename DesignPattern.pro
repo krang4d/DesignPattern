@@ -23,5 +23,8 @@ SUBDIRS +=  AbstractFactory \
             TemplateMethod\
             Visitor\
             Visitor2\
-    FactoryMethod3
+    FactoryMethod3 \
+    Builder \
+    Builder2 \
+    State
 

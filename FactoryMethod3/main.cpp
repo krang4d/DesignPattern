@@ -1,4 +1,7 @@
 #include <cstdio>
+#include <string>
+#include <cstring>
+
 using std::puts;
 
 struct Weapon {
@@ -35,7 +38,9 @@ int main() {
     if (true /*there is a monster*/) {
         Weapon* wpn = elf->getWeapon();
         wpn->attack();
-        delete wpn;
+        char *sp = strdup("Speed= ");
+        strcat(sp, std::to_string(elf->getSpeed()).c_str());
+        puts(sp);        delete wpn;
     }
     delete elf;
     return 0;
