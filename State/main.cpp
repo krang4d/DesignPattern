@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 class Machine
 {
   class State *current;
@@ -86,7 +87,7 @@ int main()
 {
   void(Machine:: *ptrs[])() =
   {
-    Machine::off, Machine::on
+    &Machine::on, &Machine::off
   };
   Machine fsm;
   int num;
