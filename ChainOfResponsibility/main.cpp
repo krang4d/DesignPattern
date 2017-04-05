@@ -3,6 +3,8 @@
 #include <ctime>
 using namespace std;
 
+int num;
+
 class Base
 {
     // 1. Указатель "next" в базовом классе
@@ -26,59 +28,61 @@ class Base
     // 2. Метод базового класса, делегирующий запрос next-объекту
     virtual void handle(int i)
     {
-        next->handle(i);
+        if(next)
+            next->handle(i);
+        else cout << "<end of chain>";
     }
 };
 
 class Handler1: public Base
 {
   public:
-     /*virtual*/void handle(int i)
+     void handle(int i) override
     {
-        if (rand() % 3)
+        if (num = (rand() % 3))
         {
             // 3. 3 из 4 запросов не обрабатываем
-            cout << "H1 passsed " << i << "  ";
+            cout << "H1 (NUM=" << num << ") passsed " << i << "  ";
             // 3. и делегируем базовому классу
             Base::handle(i);        }
         else
-          cout << "H1 handled " << i << "  ";
+          cout << "H1 (NUM="<< num << ") handled " << i << "  ";
     }
 };
 
 class Handler2: public Base
 {
   public:
-     /*virtual*/void handle(int i)
+    void handle(int i) override
     {
-        if (rand() % 3)
+        if (num = (rand() % 3))
         {
-            cout << "H2 passsed " << i << "  ";
+            cout << "H2 (NUM=" << num << ") passsed " << i << "  ";
             Base::handle(i);
         }
         else
-          cout << "H2 handled " << i << "  ";
+          cout << "H2 (NUM=" << num << ") handled " << i << "  ";
     }
 };
 
 class Handler3: public Base
 {
   public:
-     /*virtual*/void handle(int i)
+    void handle(int i) override
     {
-        if (rand() % 3)
+        if (num = (rand() % 3))
         {
-            cout << "H3 passsed " << i << "  ";
+            cout << "H3 (NUM=" << num << ") passsed " << i << "  ";
             Base::handle(i);
         }
         else
-          cout << "H3 handled " << i << "  ";
+          cout << "H3 (NUM=" << num << ") handled " << i << "  ";
     }
 };
 
 int main()
 {
-  //srand(time(0));
+  srand(time(0));
   Handler1 root;
   Handler2 two;
   Handler3 thr;

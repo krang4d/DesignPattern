@@ -4,35 +4,23 @@
  * Вспомогательный класс, описывающий некоторое преступление
  */
 class CriminalAction {
-
     friend class Policeman;     // Полицейские имеют доступ к материалам следствия
-
     int complexity;             // Сложность дела
-
     const char* description;    // Краткое описание преступления
-
 public:
     CriminalAction(int complexity, const char* description): complexity(complexity), description(description) {}
-
 };
 
 /**
  * Абстрактный полицейский, который может заниматься расследованием преступлений
  */
 class Policeman {
-
 protected:
-
     int deduction;      // дедукция (умение распутывать сложные дела) у данного полицейского
-
     Policeman* next;    // более умелый полицейский, который получит дело, если для текущего оно слишком сложное
-
-    virtual void investigateConcrete(const char* description) {}    // собственно расследование
-
+    virtual void investigateConcrete(const char* description) = 0;    // собственно расследование
 public:
-
     Policeman(int deduction): deduction(deduction) {}
-
     virtual ~Policeman() {
         if (next) {
             delete next;
@@ -65,38 +53,27 @@ public:
 };
 
 class MartinRiggs: public Policeman {
-
 protected:
-
     void investigateConcrete(const char* description) {
         std::cout << "Расследование по делу \"" << description << "\" ведет сержант Мартин Риггс" << std::endl;
     }
-
 public:
-
     MartinRiggs(int deduction): Policeman(deduction) {}
 };
-
 class JohnMcClane: public Policeman {
-
 protected:
-
     void investigateConcrete(const char* description) {
         std::cout << "Расследование по делу \"" << description << "\" ведет детектив Джон Макклейн" << std::endl;
     }
-
 public:
     JohnMcClane(int deduction): Policeman(deduction) {}
 };
 
 class VincentHanna: public Policeman {
-
 protected:
-
     void investigateConcrete(const char* description) {
         std::cout << "Расследование по делу \"" << description << "\" ведет лейтенант Винсент Ханна" << std::endl;
     }
-
 public:
     VincentHanna(int deduction): Policeman(deduction) {}
 };
