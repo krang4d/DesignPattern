@@ -1,6 +1,9 @@
 #include <iostream>
 #include <cstring>
 #include <string>
+#include <clocale>
+
+using namespace std;
 
 /** Абстрактный музыкант - не является обязательной составляющей паттерна, введен для упрощения кода */
 class Musician {
@@ -94,7 +97,8 @@ public:
     }
 
     void stopPlaying() {
-        output("заканчивает играть");
+        cout << "заканчивает играть";
+        //output("заканчивает играть");
     }
 };
 
@@ -146,6 +150,16 @@ public:
 };
 
 int main() {
+//    std::string stroka;
+//    std::setlocale(LC_ALL,"Russian_Russia.1251") ;
+//    std::cout << L"Введите строку==>> ";
+//    std::getline (std::cin,stroka,'\n');
+//    std::cout << "\n Вот ваша строка=====";
+//    std::setlocale(LC_ALL,"rus_rus.866");
+//    std::cout << stroka <<'\n';
+//    std::system ("pause");
+
+    std::cout << "Привет" << endl;
     std::cout << "OUTPUT:" << std::endl;
     BlackSabbath* band = new BlackSabbath();
     band->playCoolSong();
